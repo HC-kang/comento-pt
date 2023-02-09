@@ -1,0 +1,41 @@
+{
+  "executionRoleArn": "arn:aws:iam::000192271711:role/ecsTaskExecutionRole",
+  "taskRoleArn": "",
+  "containerDefinitions": [
+    {
+      "image": "test",
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/comento-assignment-006",
+          "awslogs-region": "ap-northeast-2",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "cpu": 0,
+      "portMappings": [
+        {
+          "hostPort": 3000,
+          "protocol": "tcp",
+          "containerPort": 3000
+        }
+      ],
+      "ulimits": [
+        {
+          "name": "nofile",
+          "softLimit": 65535,
+          "hardLimit": 65535
+        }
+      ],
+      "name": "nestjs",
+      "essential": true
+    }
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "networkMode": "awsvpc",
+  "cpu": "256",
+  "memory" : "512",
+  "family": "alpha-nestjs"
+}
