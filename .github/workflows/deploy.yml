@@ -84,5 +84,5 @@ jobs:
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
           service: nestjs
-          cluster: comento-assignment-001
+          cluster: nestjs-0214
           wait-for-service-stability: false
