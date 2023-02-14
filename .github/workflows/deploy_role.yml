@@ -49,7 +49,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-region: us-east-2
+          aws-region: ap-northeast-2
           role-to-assume: arn:aws:iam::000192271711:role/github-OIDC
           role-session-name: MyGithubOIDC
 
@@ -79,7 +79,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-region: us-east-2
+          aws-region: ap-northeast-2
           role-to-assume: arn:aws:iam::000192271711:role/github-OIDC
           role-session-name: MyGithubOIDC
 
